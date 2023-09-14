@@ -17,7 +17,9 @@ const jsonObj = {
           "Radiation resistance",
           "Turning tiny",
           "Radiation blast"
-        ]
+          
+        ],
+        "url":"https://cdn.pixabay.com/photo/2023/09/10/00/49/lovebird-8244066_960_720.jpg",
       },
       {
         "name": "Madame Uppercut",
@@ -69,7 +71,10 @@ jsonObj["members"][1]["powers"][2] //para acceder más abajo de la jerarquía de
     
     const myH1 = document.createElement('h1');
     myH1.textContent = jsonObj["squadName"];
-    header.appendChild(myH1);
+    header.appendChild(myH1); //appendChild" es un método utilizado 
+    //para agregar un elemento hijo a un elemento padre en el DOM  
+   
+    
   
     const myPara = document.createElement('p');
     myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
@@ -86,11 +91,13 @@ jsonObj["members"][1]["powers"][2] //para acceder más abajo de la jerarquía de
       const myPara2 = document.createElement('p');
       const myPara3 = document.createElement('p');
       const myList = document.createElement('ul');
-  
+      
+
       myH2.textContent = heroes[i].name;
       myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
       myPara2.textContent = 'Age: ' + heroes[i].age;
       myPara3.textContent = 'Superpowers:';
+      
   
       const superPowers = heroes[i].powers;
       for (var j = 0; j < superPowers.length; j++) {
@@ -112,3 +119,21 @@ console.info(jsonObj)
 console.info(jsonObj.members[0].powers[0])
  populateHeader(jsonObj)
   showHeroes(jsonObj)
+
+
+///EJERCICIO CON LA URL DE UNA IMAGEN///
+
+  // const data= {
+
+  //   "url":"https://cdn.pixabay.com/photo/2023/09/10/00/49/lovebird-8244066_960_720.jpg"
+    
+  //   }
+  //   const section = document.getElementById("section");
+    
+  //   function pintar(){
+  //       const image = document.createElement("img")
+  //       image.src = data.url
+  //       section.appendChild(image)
+  //   }
+    
+  //   pintar()
